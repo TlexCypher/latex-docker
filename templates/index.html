@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PDF Preview</title>
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+  <iframe src="/pdf/main.pdf" width="100%" height="100%"></iframe>
+  <script>
+    setInterval(function() {
+      var iframe = document.querySelector('iframe');
+      iframe.src = iframe.src;
+    }, 5000);
+  </script>
+</body>
+</html>
