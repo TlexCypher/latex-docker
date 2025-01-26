@@ -21,7 +21,7 @@ RUN cd .. && rm -rf neovim
 
 RUN cargo install --locked tree-sitter-cli
 
-ENV PATH="$HOME/.cargo/bin:$PATH"
+ENV PATH="/root/.cargo/bin:$PATH"
 
 # install nodejs for compiling tree-sitter for tex
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt-get install -y nodejs

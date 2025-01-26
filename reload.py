@@ -19,7 +19,7 @@ def index():
 # tex ファイルをコンパイルする関数
 def compile_tex():
     while True:
-        subprocess.run(['latexmk', '-pdf', 'main.tex'])
+        subprocess.run(['latexmk', 'main.tex'])
         time.sleep(4)
 
 if __name__ == '__main__':

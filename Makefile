@@ -4,14 +4,14 @@
 MAIN = main
 
 # 中間ファイルの拡張子リスト
-CLEAN_FILES = *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.log *.out *.run.xml *.synctex.gz *.toc
+CLEAN_FILES = *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.log *.out *.run.xml *.synctex.gz *.toc *.pdf
 
 # デフォルトターゲット
 all: build
 
 # ドキュメントをビルド
 build:
-	latexmk -pdf -synctex=1 $(MAIN)
+	latexmk $(MAIN).tex
 
 # 全ての中間ファイルを削除
 clean:
